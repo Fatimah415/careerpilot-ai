@@ -1,0 +1,212 @@
+[
+  {
+    "title": "Junior Python Developer",
+    "company": "Systems Limited",
+    "location": "Lahore, Pakistan",
+    "description": "Looking for a junior Python developer to join our backend team.",
+    "required_skills": ["Python", "Flask", "SQL", "Git"]
+  },
+  {
+    "title": "Data Analyst Intern",
+    "company": "Daraz",
+    "location": "Karachi, Pakistan",
+    "description": "Hiring data analyst interns to work on e-commerce analytics.",
+    "required_skills": ["SQL", "Excel", "Python", "Power BI"]
+  },
+  {
+    "title": "Frontend Developer",
+    "company": "Bazaar Technologies",
+    "location": "Karachi, Pakistan",
+    "description": "Join our frontend team building user-facing features.",
+    "required_skills": ["React", "JavaScript", "Tailwind", "Redux"]
+  },
+  {
+    "title": "Machine Learning Engineer",
+    "company": "Afiniti",
+    "location": "Islamabad, Pakistan",
+    "description": "Build ML models for call center optimization.",
+    "required_skills": ["Python", "TensorFlow", "SQL", "Scikit-learn"]
+  },
+  {
+    "title": "DevOps Engineer",
+    "company": "Careem",
+    "location": "Lahore, Pakistan",
+    "description": "Manage cloud infrastructure and CI/CD pipelines.",
+    "required_skills": ["AWS", "Docker", "Linux", "Jenkins"]
+  },
+  {
+    "title": "QA Engineer",
+    "company": "Confiz",
+    "location": "Rawalpindi, Pakistan",
+    "description": "Write automated tests and ensure software quality.",
+    "required_skills": ["Selenium", "Java", "Python", "JUnit"]
+  },
+  {
+    "title": "Backend Developer",
+    "company": "Tintash",
+    "location": "Lahore, Pakistan",
+    "description": "Build scalable backend services using Node.js.",
+    "required_skills": ["Node.js", "Express", "MongoDB", "PostgreSQL"]
+  },
+  {
+    "title": "Mobile Developer",
+    "company": "VentureDive",
+    "location": "Karachi, Pakistan",
+    "description": "Build cross-platform mobile apps using Flutter.",
+    "required_skills": ["Flutter", "Dart", "Firebase", "Git"]
+  },
+  {
+    "title": "UI/UX Designer",
+    "company": "NetSol",
+    "location": "Lahore, Pakistan",
+    "description": "Design user interfaces and experiences.",
+    "required_skills": ["Figma", "Adobe XD", "Prototyping"]
+  },
+  {
+    "title": "Data Engineer",
+    "company": "10Pearls",
+    "location": "Islamabad, Pakistan",
+    "description": "Build data pipelines and ETL processes.",
+    "required_skills": ["Python", "SQL", "Spark", "Airflow"]
+  },
+  {
+    "title": "Full Stack Developer",
+    "company": "Educative",
+    "location": "Lahore, Pakistan",
+    "description": "Build interactive learning platforms.",
+    "required_skills": ["React", "Node.js", "MongoDB", "JavaScript"]
+  },
+  {
+    "title": "Cloud Engineer",
+    "company": "Mobilink",
+    "location": "Islamabad, Pakistan",
+    "description": "Manage cloud infrastructure on AWS and Azure.",
+    "required_skills": ["AWS", "Azure", "Kubernetes", "Terraform"]
+  },
+  {
+    "title": "iOS Developer",
+    "company": "Telenor",
+    "location": "Islamabad, Pakistan",
+    "description": "Build iOS apps using Swift.",
+    "required_skills": ["Swift", "SwiftUI", "iOS", "Git"]
+  },
+  {
+    "title": "Android Developer",
+    "company": "Careem",
+    "location": "Lahore, Pakistan",
+    "description": "Build Android apps using Kotlin.",
+    "required_skills": ["Kotlin", "Android", "Jetpack", "Git"]
+  },
+  {
+    "title": "Security Analyst",
+    "company": "Trillium",
+    "location": "Karachi, Pakistan",
+    "description": "Monitor security threats.",
+    "required_skills": ["Network Security", "Linux", "Python", "SIEM"]
+  },
+  {
+    "title": "Database Administrator",
+    "company": "Systems Limited",
+    "location": "Lahore, Pakistan",
+    "description": "Manage and optimize databases.",
+    "required_skills": ["PostgreSQL", "MySQL", "SQL", "Backup"]
+  },
+  {
+    "title": "Product Manager",
+    "company": "Daraz",
+    "location": "Karachi, Pakistan",
+    "description": "Lead product development.",
+    "required_skills": ["Agile", "Product Strategy", "Analytics"]
+  },
+  {
+    "title": "Technical Writer",
+    "company": "Educative",
+    "location": "Lahore, Pakistan",
+    "description": "Write technical documentation.",
+    "required_skills": ["Technical Writing", "Markdown", "Git"]
+  },
+  {
+    "title": "Blockchain Developer",
+    "company": "Afiniti",
+    "location": "Islamabad, Pakistan",
+    "description": "Build blockchain applications.",
+    "required_skills": ["Solidity", "Ethereum", "Web3", "JavaScript"]
+  },
+  {
+    "title": "AI Research Assistant",
+    "company": "10Pearls",
+    "location": "Karachi, Pakistan",
+    "description": "Research AI/ML algorithms.",
+    "required_skills": ["Python", "Machine Learning", "TensorFlow"]
+  },
+  {
+    "title": "Scrum Master",
+    "company": "NetSol",
+    "location": "Lahore, Pakistan",
+    "description": "Facilitate Agile ceremonies.",
+    "required_skills": ["Scrum", "Agile", "JIRA", "Leadership"]
+  },
+  {
+    "title": "Salesforce Developer",
+    "company": "Confiz",
+    "location": "Rawalpindi, Pakistan",
+    "description": "Build on Salesforce platform.",
+    "required_skills": ["Salesforce", "Apex", "Lightning", "JavaScript"]
+  },
+  {
+    "title": "Network Engineer",
+    "company": "Telenor",
+    "location": "Islamabad, Pakistan",
+    "description": "Design and maintain networks.",
+    "required_skills": ["Cisco", "TCP/IP", "Routing", "Firewalls"]
+  },
+  {
+    "title": "Game Developer",
+    "company": "Tintash",
+    "location": "Lahore, Pakistan",
+    "description": "Build mobile games.",
+    "required_skills": ["Unity", "C#", "Game Design"]
+  },
+  {
+    "title": "Business Analyst",
+    "company": "Systems Limited",
+    "location": "Lahore, Pakistan",
+    "description": "Bridge business and tech teams.",
+    "required_skills": ["SQL", "Excel", "Communication", "Agile"]
+  },
+  {
+    "title": "React Native Developer",
+    "company": "Bazaar",
+    "location": "Karachi, Pakistan",
+    "description": "Build cross-platform mobile apps.",
+    "required_skills": ["React Native", "JavaScript", "Redux", "Git"]
+  },
+  {
+    "title": "Site Reliability Engineer",
+    "company": "Careem",
+    "location": "Lahore, Pakistan",
+    "description": "Ensure system reliability.",
+    "required_skills": ["AWS", "Kubernetes", "Python", "Linux"]
+  },
+  {
+    "title": "Data Scientist",
+    "company": "Daraz",
+    "location": "Karachi, Pakistan",
+    "description": "Build predictive models.",
+    "required_skills": ["Python", "SQL", "Machine Learning", "Statistics"]
+  },
+  {
+    "title": "Embedded Engineer",
+    "company": "Mobilink",
+    "location": "Islamabad, Pakistan",
+    "description": "Develop firmware for IoT.",
+    "required_skills": ["C", "C++", "Microcontrollers", "IoT"]
+  },
+  {
+    "title": "Technical Support",
+    "company": "Trillium",
+    "location": "Karachi, Pakistan",
+    "description": "Provide technical support.",
+    "required_skills": ["Linux", "SQL", "Networking", "Communication"]
+  }
+]

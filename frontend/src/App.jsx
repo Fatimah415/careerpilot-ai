@@ -9,7 +9,7 @@ function App() {
 
   useEffect(() => {
     // Test backend connection when page loads
-    fetch('http://127.0.0.1:5000/api/ping')
+    fetch('http://127.0.0.1:5001/api/ping')
       .then(response => response.json())
       .then(data => {
         console.log('Backend response:', data);
@@ -30,7 +30,7 @@ function App() {
     setMessage('Registering...');
     
     try {
-      const response = await fetch('http://127.0.0.1:5000/api/register', {
+      const response = await fetch('http://127.0.0.1:5001/api/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

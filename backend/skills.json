@@ -1,0 +1,7 @@
+{
+  "programming_languages": ["Python", "JavaScript", "Java", "C++", "SQL", "TypeScript", "Go", "Swift", "Kotlin", "Ruby"],
+  "frameworks": ["React", "Django", "Flask", "Node.js", "Express", "Angular", "Vue", "Spring", "TensorFlow", "PyTorch"],
+  "databases": ["PostgreSQL", "MySQL", "MongoDB", "SQLite", "Redis", "Oracle"],
+  "tools": ["Git", "Docker", "Kubernetes", "AWS", "Jenkins", "Linux", "JIRA"],
+  "soft_skills": ["Communication", "Teamwork", "Leadership", "Problem Solving", "Project Management"]
+}

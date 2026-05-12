@@ -1,84 +1,102 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
-from flask_jwt_extended import JWTManager, create_access_token
-import sqlite3
-from datetime import timedelta
+from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
+from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime, timedelta
+import json
+import os
 
-app = Flask(__name__)
+db = SQLAlchemy()
 
-# THIS IS THE FIX - Allow frontend to talk to backend
-CORS(app, origins=["http://localhost:5173", "http://127.0.0.1:5173"])
-
-app.config['JWT_SECRET_KEY'] = 'secret-key'
-app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(days=1)
-jwt = JWTManager(app)
-
-def init_db():
-    conn = sqlite3.connect('careerpilot.db')
-    c = conn.cursor()
-    c.execute('''CREATE TABLE IF NOT EXISTS users
-                 (id INTEGER PRIMARY KEY AUTOINCREMENT,
-                  email TEXT UNIQUE,
-                  password TEXT,
-                  full_name TEXT)''')
-    conn.commit()
-    conn.close()
-
-init_db()
-
-@app.route('/api/ping', methods=['GET'])
-def ping():
-    return jsonify({'message': 'pong', 'service': 'CareerPilot AI'})
-
-@app.route('/api/register', methods=['POST'])
-def register():
-    data = request.get_json()
-    email = data.get('email')
-    password = data.get('password')
-    full_name = data.get('full_name')
+def create_app():
+    app = Flask(__name__)
     
-    conn = sqlite3.connect('careerpilot.db')
-    c = conn.cursor()
+    # Configuration
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///careerpilot.db'
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    app.config['JWT_SECRET_KEY'] = 'your-secret-key-change-this'
+    app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(days=1)
     
-    c.execute("SELECT * FROM users WHERE email = ?", (email,))
-    if c.fetchone():
-        conn.close()
-        return jsonify({'error': 'User already exists'}), 400
+    # Initialize extensions
+    CORS(app, origins="*")
+    jwt = JWTManager(app)
+    db.init_app(app)
     
-    c.execute("INSERT INTO users (email, password, full_name) VALUES (?, ?, ?)",
-              (email, password, full_name))
-    conn.commit()
-    user_id = c.lastrowid
-    conn.close()
+    # Create tables
+    with app.app_context():
+        db.create_all()
     
-    token = create_access_token(identity=user_id)
+    # Import models here to avoid circular imports
+    from backend.models import User, Job
     
-    return jsonify({
-        'user': {'id': user_id, 'email': email, 'full_name': full_name},
-        'token': token
-    }), 201
-
-@app.route('/api/login', methods=['POST'])
-def login():
-    data = request.get_json()
-    email = data.get('email')
-    password = data.get('password')
+    # Routes
+    @app.route('/api/ping', methods=['GET'])
+    def ping():
+        return jsonify({'message': 'pong', 'service': 'CareerPilot AI'})
     
-    conn = sqlite3.connect('careerpilot.db')
-    c = conn.cursor()
-    c.execute("SELECT * FROM users WHERE email = ? AND password = ?", (email, password))
-    user = c.fetchone()
-    conn.close()
+    @app.route('/api/register', methods=['POST'])
+    def register():
+        data = request.get_json()
+        
+        if not data or not data.get('email') or not data.get('password'):
+            return jsonify({'error': 'Email and password required'}), 400
+        
+        if User.query.filter_by(email=data['email']).first():
+            return jsonify({'error': 'User already exists'}), 400
+        
+        user = User(
+            email=data['email'],
+            full_name=data.get('full_name', ''),
+            password_hash=data['password']
+        )
+        
+        db.session.add(user)
+        db.session.commit()
+        
+        access_token = create_access_token(identity=user.id)
+        
+        return jsonify({
+            'user': {
+                'id': user.id,
+                'email': user.email,
+                'full_name': user.full_name
+            },
+            'token': access_token
+        }), 201
     
-    if not user:
-        return jsonify({'error': 'Invalid credentials'}), 401
+    @app.route('/api/login', methods=['POST'])
+    def login():
+        data = request.get_json()
+        
+        if not data:
+            return jsonify({'error': 'Email and password required'}), 400
+        
+        user = User.query.filter_by(email=data.get('email')).first()
+        
+        if not user or user.password_hash != data.get('password'):
+            return jsonify({'error': 'Invalid credentials'}), 401
+        
+        access_token = create_access_token(identity=user.id)
+        
+        return jsonify({
+            'token': access_token,
+            'user': {
+                'id': user.id,
+                'email': user.email,
+                'full_name': user.full_name
+            }
+        })
     
-    token = create_access_token(identity=user[0])
+    @app.route('/api/jobs', methods=['GET'])
+    def list_jobs():
+        jobs = Job.query.order_by(Job.posted_at.desc()).all()
+        return jsonify({'jobs': [job.to_dict() for job in jobs]})
     
-    return jsonify({
-        'token': token,
-        'user': {'id': user[0], 'email': user[1], 'full_name': user[3]}
-    })
-
-if __name__ == '__main__':
-    app.run(debug=True, port=5001)
+    @app.route('/api/jobs/<int:job_id>', methods=['GET'])
+    def get_job(job_id):
+        job = Job.query.get(job_id)
+        if not job:
+            return jsonify({'error': 'Job not found'}), 404
+        return jsonify(job.to_dict())
+    
+    return app
