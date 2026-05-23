@@ -4,9 +4,12 @@ from flask_jwt_extended import JWTManager, create_access_token, jwt_required, ge
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.utils import secure_filename
 from datetime import datetime, timedelta
+from dotenv import load_dotenv
 import json
 import os
 import uuid
+
+load_dotenv()
 
 db = SQLAlchemy()
 
@@ -25,7 +28,7 @@ def create_app():
     _base_dir = os.path.dirname(os.path.abspath(__file__))
     app.config["SQLALCHEMY_DATABASE_URI"] = f"sqlite:///{os.path.join(_base_dir, 'careerpilot.db')}"
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-    app.config["JWT_SECRET_KEY"] = "your-secret-key-change-this"
+    app.config["JWT_SECRET_KEY"] = os.environ.get("JWT_SECRET_KEY", "dev-secret-change-in-prod")
     app.config["JWT_ACCESS_TOKEN_EXPIRES"] = timedelta(days=1)
     app.config["UPLOAD_FOLDER"] = os.path.join(os.path.dirname(__file__), "uploads")
     app.config["MAX_CONTENT_LENGTH"] = MAX_FILE_SIZE
@@ -33,7 +36,8 @@ def create_app():
     os.makedirs(app.config["UPLOAD_FOLDER"], exist_ok=True)
 
     # Initialize extensions
-    CORS(app, origins="*")
+    allowed_origins = os.environ.get("CORS_ORIGINS", "*").split(",")
+    CORS(app, origins=allowed_origins)
     JWTManager(app)
     db.init_app(app)
 
