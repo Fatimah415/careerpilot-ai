@@ -5,17 +5,25 @@ import CVUpload from "../components/CVUpload";
 import ProfileEditor from "../components/ProfileEditor";
 import SkillTag from "../components/SkillTag";
 import RecommendationsView from "../components/RecommendationsView";
+import ATSScoreView from "../components/ATSScoreView";
 
 export default function DashboardPage() {
   const { user } = useAuth();
   const [cv, setCv] = useState(null);
   const [tab, setTab] = useState("cv");
   const [recsRefresh, setRecsRefresh] = useState(0);
+  const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
     api.get("/cv/me")
       .then((res) => setCv(res.data))
       .catch(() => setCv(null));
+  }, []);
+
+  useEffect(() => {
+    api.get("/jobs")
+      .then((res) => setJobs(res.data.jobs || []))
+      .catch(() => setJobs([]));
   }, []);
 
   function handleParsed(data) {
@@ -89,6 +97,8 @@ export default function DashboardPage() {
               <ProfileEditor />
             </div>
           )}
+
+          <ATSScoreView jobs={jobs} />
         </div>
 
         {/* Right column: Recommendations */}

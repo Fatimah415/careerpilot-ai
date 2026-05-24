@@ -42,6 +42,7 @@ def create_app():
     from backend.matching import skill_overlap
     from backend.parser import parse_cv
     from backend.matcher import MATCHER
+    from backend.ats import score_cv_against_job
 
     with app.app_context():
         db.create_all()
@@ -278,6 +279,7 @@ def create_app():
             file_path=save_path,
             parsed_text=parsed["raw_text"],
             parsed_skills=parsed["skills"],
+            sections_present=parsed["sections_present"],
         )
         db.session.add(cv)
         db.session.commit()
@@ -309,5 +311,37 @@ def create_app():
             "uploaded_at": cv.uploaded_at.isoformat(),
             "text_length": len(cv.parsed_text or ""),
         })
+
+    @app.route("/api/cv/ats", methods=["GET"])
+    @jwt_required()
+    def cv_ats_score():
+        user_id = int(get_jwt_identity())
+        job_id = request.args.get("job_id", type=int)
+        if not job_id:
+            return jsonify({"error": "job_id query param required"}), 422
+
+        cv = (CV.query
+              .filter_by(user_id=user_id)
+              .order_by(CV.uploaded_at.desc())
+              .first())
+        if not cv:
+            return jsonify({"error": "No CV uploaded yet"}), 404
+
+        job = Job.query.get(job_id)
+        if not job:
+            return jsonify({"error": "Job not found"}), 404
+
+        if MATCHER.vectorizer is None:
+            return jsonify({"error": "Matcher not ready"}), 503
+
+        result = score_cv_against_job(
+            cv.parsed_text or "",
+            cv.parsed_skills or [],
+            cv.sections_present or {},
+            job,
+        )
+        result["job_title"] = job.title
+        result["job_company"] = job.company
+        return jsonify(result)
 
     return app

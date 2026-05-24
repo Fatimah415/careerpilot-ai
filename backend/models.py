@@ -69,4 +69,5 @@ class CV(db.Model):
     file_path = db.Column(db.String(500), nullable=False)
     parsed_text = db.Column(db.Text)
     parsed_skills = db.Column(db.JSON, default=list)
+    sections_present = db.Column(db.JSON, default=dict)
     uploaded_at = db.Column(db.DateTime, default=datetime.utcnow)
