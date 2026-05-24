@@ -4,12 +4,9 @@ from flask_jwt_extended import JWTManager, create_access_token, jwt_required, ge
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.utils import secure_filename
 from datetime import datetime, timedelta
-from dotenv import load_dotenv
 import json
 import os
 import uuid
-
-load_dotenv()
 
 db = SQLAlchemy()
 
@@ -28,7 +25,7 @@ def create_app():
     _base_dir = os.path.dirname(os.path.abspath(__file__))
     app.config["SQLALCHEMY_DATABASE_URI"] = f"sqlite:///{os.path.join(_base_dir, 'careerpilot.db')}"
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-    app.config["JWT_SECRET_KEY"] = os.environ.get("JWT_SECRET_KEY", "dev-secret-change-in-prod")
+    app.config["JWT_SECRET_KEY"] = "your-secret-key-change-this"
     app.config["JWT_ACCESS_TOKEN_EXPIRES"] = timedelta(days=1)
     app.config["UPLOAD_FOLDER"] = os.path.join(os.path.dirname(__file__), "uploads")
     app.config["MAX_CONTENT_LENGTH"] = MAX_FILE_SIZE
@@ -36,8 +33,7 @@ def create_app():
     os.makedirs(app.config["UPLOAD_FOLDER"], exist_ok=True)
 
     # Initialize extensions
-    allowed_origins = os.environ.get("CORS_ORIGINS", "*").split(",")
-    CORS(app, origins=allowed_origins)
+    CORS(app, origins="*")
     JWTManager(app)
     db.init_app(app)
 
@@ -45,6 +41,7 @@ def create_app():
     from backend.models import User, Job, CV
     from backend.matching import skill_overlap
     from backend.parser import parse_cv
+    from backend.matcher import MATCHER
 
     with app.app_context():
         db.create_all()
@@ -64,6 +61,7 @@ def create_app():
                 db.session.commit()
                 print(f"[ok] Seeded {len(jobs_data)} jobs")
         print("[ok] Database initialized")
+        MATCHER.build_from_jobs(Job.query.all())
 
     # ------------------------------------------------------------------ #
     #  Core / Auth                                                         #
@@ -169,6 +167,45 @@ def create_app():
         if not job:
             return jsonify({"error": "Job not found"}), 404
         return jsonify(job.to_dict())
+
+    @app.route("/api/jobs/<int:job_id>/match", methods=["GET"])
+    @jwt_required()
+    def match_job(job_id):
+        user_id = int(get_jwt_identity())
+        cv = (CV.query
+              .filter_by(user_id=user_id)
+              .order_by(CV.uploaded_at.desc())
+              .first())
+        if not cv:
+            return jsonify({"error": "No CV uploaded yet"}), 404
+
+        if MATCHER.vectorizer is None:
+            return jsonify({"error": "Matcher not ready"}), 503
+
+        try:
+            result = MATCHER.match_cv_to_job(cv.parsed_text or "", cv.parsed_skills or [], job_id)
+        except ValueError as e:
+            return jsonify({"error": str(e)}), 404
+
+        return jsonify(result)
+
+    @app.route("/api/recommendations", methods=["GET"])
+    @jwt_required()
+    def recommendations():
+        user_id = int(get_jwt_identity())
+        cv = (CV.query
+              .filter_by(user_id=user_id)
+              .order_by(CV.uploaded_at.desc())
+              .first())
+        if not cv:
+            return jsonify({"error": "No CV uploaded yet"}), 404
+
+        if MATCHER.vectorizer is None:
+            return jsonify({"error": "Matcher not ready"}), 503
+
+        top_n = min(int(request.args.get("top_n", 10)), 50)
+        ranked = MATCHER.rank_jobs_for_cv(cv.parsed_text or "", cv.parsed_skills or [], top_n=top_n)
+        return jsonify({"recommendations": ranked})
 
     # ------------------------------------------------------------------ #
     #  Debug                                                               #
