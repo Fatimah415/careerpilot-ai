@@ -17,7 +17,7 @@ export default function JobCard({ job, cvSkills = [] }) {
           <h2 className="text-lg font-semibold text-gray-800">{job.title}</h2>
           <p className="text-sm text-gray-500">
             {job.company}
-            {job.location ? ` · ${job.location}` : ""}
+            {job.location ? ` - ${job.location}` : ""}
           </p>
         </div>
         {coveragePct !== null && (

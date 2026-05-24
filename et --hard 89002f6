@@ -1,0 +1,6 @@
+[33m968a9dd[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m Day 7: JobCard with match scoring, enhanced JobsPage, deployment prep
+[33ma563add[m Day 6: CV upload component, profile editor, skill tags, full dashboard
+[33mfc857aa[m Day 5: routing, auth context, login/signup pages, dashboard shell
+[33m89002f6[m Day 3: candidate profile fields, profile update endpoint, skill overlap helper. Day 4: CV upload endpoint, pdfplumber parser, spaCy NER, skill extraction via Trie
+[33m51eab20[m Day 2: Jobs database (30 jobs), API endpoints, and Trie for DSA skill lookup
+[33me5970aa[m Day 1: CareerPilot AI foundation complete

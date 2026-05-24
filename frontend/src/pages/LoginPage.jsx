@@ -61,7 +61,7 @@ export default function LoginPage() {
               value={form.password}
               onChange={handleChange}
               className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              placeholder="••••••••"
+              placeholder="........"
             />
           </div>
           <button
@@ -69,7 +69,7 @@ export default function LoginPage() {
             disabled={loading}
             className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 rounded-lg transition disabled:opacity-60"
           >
-            {loading ? "Signing in…" : "Sign In"}
+            {loading ? "Signing in..." : "Sign In"}
           </button>
         </form>
 

@@ -3,7 +3,7 @@ import api from "../lib/api";
 import SkillTag from "./SkillTag";
 
 export default function CVUpload({ onParsed }) {
-  const [status, setStatus] = useState("idle"); // idle | uploading | done | error
+  const [status, setStatus] = useState("idle");
   const [result, setResult] = useState(null);
   const [error, setError] = useState("");
   const inputRef = useRef();
@@ -51,11 +51,11 @@ export default function CVUpload({ onParsed }) {
           onChange={(e) => handleFile(e.target.files?.[0])}
         />
         {status === "uploading" ? (
-          <p className="text-indigo-600 font-medium">Uploading and parsing…</p>
+          <p className="text-indigo-600 font-medium">Uploading and parsing...</p>
         ) : (
           <>
             <p className="text-gray-600 font-medium">Drop your CV here or click to browse</p>
-            <p className="text-xs text-gray-400 mt-1">PDF only · Max 5 MB</p>
+            <p className="text-xs text-gray-400 mt-1">PDF only - Max 5 MB</p>
           </>
         )}
       </div>
@@ -69,7 +69,7 @@ export default function CVUpload({ onParsed }) {
       {status === "done" && result && (
         <div className="bg-white border border-gray-100 rounded-2xl shadow p-6 space-y-3">
           <p className="text-sm font-semibold text-gray-700">
-            CV parsed — {result.text_length} characters extracted
+            CV parsed - {result.text_length} characters extracted
           </p>
           {result.skills?.length > 0 ? (
             <div className="flex flex-wrap gap-2">

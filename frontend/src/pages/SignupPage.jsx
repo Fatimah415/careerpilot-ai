@@ -82,7 +82,7 @@ export default function SignupPage() {
             disabled={loading}
             className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 rounded-lg transition disabled:opacity-60"
           >
-            {loading ? "Creating account…" : "Create Account"}
+            {loading ? "Creating account..." : "Create Account"}
           </button>
         </form>
 

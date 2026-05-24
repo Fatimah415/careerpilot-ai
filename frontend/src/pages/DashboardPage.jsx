@@ -8,7 +8,7 @@ import SkillTag from "../components/SkillTag";
 export default function DashboardPage() {
   const { user } = useAuth();
   const [cv, setCv] = useState(null);
-  const [tab, setTab] = useState("cv"); // cv | profile
+  const [tab, setTab] = useState("cv");
 
   useEffect(() => {
     api.get("/cv/me")
@@ -22,9 +22,7 @@ export default function DashboardPage() {
 
   const tabClass = (t) =>
     `px-4 py-2 text-sm font-medium rounded-lg transition ${
-      tab === t
-        ? "bg-indigo-600 text-white"
-        : "text-gray-600 hover:bg-gray-100"
+      tab === t ? "bg-indigo-600 text-white" : "text-gray-600 hover:bg-gray-100"
     }`;
 
   return (
@@ -34,7 +32,6 @@ export default function DashboardPage() {
       </h1>
       <p className="text-gray-500 mb-8 text-sm">Manage your CV and profile below.</p>
 
-      {/* Stats row */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
         <div className="bg-white rounded-2xl shadow border border-gray-100 p-5">
           <p className="text-xs text-gray-400 uppercase tracking-wide mb-1">CV Status</p>
@@ -45,20 +42,19 @@ export default function DashboardPage() {
         <div className="bg-white rounded-2xl shadow border border-gray-100 p-5">
           <p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Skills Found</p>
           <p className="text-lg font-semibold text-indigo-600">
-            {cv ? cv.skills?.length ?? 0 : "—"}
+            {cv ? cv.skills?.length ?? 0 : "-"}
           </p>
         </div>
         <div className="bg-white rounded-2xl shadow border border-gray-100 p-5">
           <p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Target Role</p>
           <p className="text-lg font-semibold text-indigo-600">
-            {user?.target_role || "—"}
+            {user?.target_role || "-"}
           </p>
         </div>
       </div>
 
-      {/* Tabs */}
       <div className="flex gap-2 mb-6">
-        <button className={tabClass("cv")} onClick={() => setTab("cv")}>CV & Skills</button>
+        <button className={tabClass("cv")} onClick={() => setTab("cv")}>CV &amp; Skills</button>
         <button className={tabClass("profile")} onClick={() => setTab("profile")}>Profile</button>
       </div>
 
@@ -68,7 +64,6 @@ export default function DashboardPage() {
             <h2 className="text-lg font-semibold text-gray-800 mb-4">Upload your CV</h2>
             <CVUpload onParsed={handleParsed} />
           </div>
-
           {cv?.skills?.length > 0 && (
             <div>
               <h3 className="text-sm font-semibold text-gray-700 mb-3">Detected Skills</h3>

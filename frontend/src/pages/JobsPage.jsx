@@ -43,7 +43,7 @@ export default function JobsPage() {
       })
     : filtered;
 
-  if (loading) return <div className="p-10 text-center text-gray-400">Loading jobs…</div>;
+  if (loading) return <div className="p-10 text-center text-gray-400">Loading jobs...</div>;
   if (error) return <div className="p-10 text-center text-red-500">{error}</div>;
 
   return (
@@ -52,7 +52,7 @@ export default function JobsPage() {
         <h1 className="text-3xl font-bold text-gray-800">Browse Jobs</h1>
         <input
           type="text"
-          placeholder="Search by title, company, location…"
+          placeholder="Search by title, company, location..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           className="border border-gray-300 rounded-lg px-4 py-2 text-sm w-full sm:w-72 focus:outline-none focus:ring-2 focus:ring-indigo-500"
@@ -61,7 +61,7 @@ export default function JobsPage() {
 
       {cvSkills.length > 0 && (
         <p className="text-sm text-indigo-600 mb-4">
-          Showing {sorted.length} jobs — sorted by your skill match
+          Showing {sorted.length} jobs - sorted by your skill match
         </p>
       )}
 

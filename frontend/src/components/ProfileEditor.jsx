@@ -3,7 +3,7 @@ import { useAuth } from "../lib/AuthContext";
 import api from "../lib/api";
 
 export default function ProfileEditor() {
-  const { user, login } = useAuth();
+  const { user } = useAuth();
   const [form, setForm] = useState({
     full_name: user?.full_name || "",
     target_role: user?.target_role || "",
@@ -95,7 +95,7 @@ export default function ProfileEditor() {
           value={form.bio}
           onChange={handleChange}
           rows={3}
-          placeholder="A short professional summary…"
+          placeholder="A short professional summary..."
           className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-none"
         />
       </div>
@@ -105,7 +105,7 @@ export default function ProfileEditor() {
         disabled={saving}
         className="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold px-5 py-2 rounded-lg transition disabled:opacity-60"
       >
-        {saving ? "Saving…" : saved ? "Saved!" : "Save Profile"}
+        {saving ? "Saving..." : saved ? "Saved!" : "Save Profile"}
       </button>
     </form>
   );
