@@ -4,11 +4,13 @@ import api from "../lib/api";
 import CVUpload from "../components/CVUpload";
 import ProfileEditor from "../components/ProfileEditor";
 import SkillTag from "../components/SkillTag";
+import RecommendationsView from "../components/RecommendationsView";
 
 export default function DashboardPage() {
   const { user } = useAuth();
   const [cv, setCv] = useState(null);
   const [tab, setTab] = useState("cv");
+  const [recsRefresh, setRecsRefresh] = useState(0);
 
   useEffect(() => {
     api.get("/cv/me")
@@ -18,6 +20,7 @@ export default function DashboardPage() {
 
   function handleParsed(data) {
     setCv({ skills: data.skills, text_length: data.text_length });
+    setRecsRefresh((n) => n + 1);
   }
 
   const tabClass = (t) =>
@@ -26,7 +29,7 @@ export default function DashboardPage() {
     }`;
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-10">
+    <div className="max-w-6xl mx-auto px-4 py-10">
       <h1 className="text-3xl font-bold text-gray-800 mb-1">
         Welcome, {user?.full_name}!
       </h1>
@@ -53,36 +56,46 @@ export default function DashboardPage() {
         </div>
       </div>
 
-      <div className="flex gap-2 mb-6">
-        <button className={tabClass("cv")} onClick={() => setTab("cv")}>CV &amp; Skills</button>
-        <button className={tabClass("profile")} onClick={() => setTab("profile")}>Profile</button>
-      </div>
-
-      {tab === "cv" && (
-        <div className="bg-white rounded-2xl shadow border border-gray-100 p-6 space-y-6">
-          <div>
-            <h2 className="text-lg font-semibold text-gray-800 mb-4">Upload your CV</h2>
-            <CVUpload onParsed={handleParsed} />
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {/* Left column: CV & Profile */}
+        <div className="lg:col-span-1 space-y-6">
+          <div className="flex gap-2">
+            <button className={tabClass("cv")} onClick={() => setTab("cv")}>CV &amp; Skills</button>
+            <button className={tabClass("profile")} onClick={() => setTab("profile")}>Profile</button>
           </div>
-          {cv?.skills?.length > 0 && (
-            <div>
-              <h3 className="text-sm font-semibold text-gray-700 mb-3">Detected Skills</h3>
-              <div className="flex flex-wrap gap-2">
-                {cv.skills.map((s) => (
-                  <SkillTag key={s} skill={s} variant="match" />
-                ))}
+
+          {tab === "cv" && (
+            <div className="bg-white rounded-2xl shadow border border-gray-100 p-6 space-y-6">
+              <div>
+                <h2 className="text-base font-semibold text-gray-800 mb-4">Upload your CV</h2>
+                <CVUpload onParsed={handleParsed} />
               </div>
+              {cv?.skills?.length > 0 && (
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-700 mb-3">Detected Skills</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {cv.skills.map((s) => (
+                      <SkillTag key={s} skill={s} variant="match" />
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+
+          {tab === "profile" && (
+            <div className="bg-white rounded-2xl shadow border border-gray-100 p-6">
+              <h2 className="text-base font-semibold text-gray-800 mb-4">Edit Profile</h2>
+              <ProfileEditor />
             </div>
           )}
         </div>
-      )}
 
-      {tab === "profile" && (
-        <div className="bg-white rounded-2xl shadow border border-gray-100 p-6">
-          <h2 className="text-lg font-semibold text-gray-800 mb-4">Edit Profile</h2>
-          <ProfileEditor />
+        {/* Right column: Recommendations */}
+        <div className="lg:col-span-2">
+          <RecommendationsView refreshTrigger={recsRefresh} />
         </div>
-      )}
+      </div>
     </div>
   );
 }

@@ -1,212 +1,348 @@
 [
   {
-    "title": "Junior Python Developer",
-    "company": "Systems Limited",
-    "location": "Lahore, Pakistan",
-    "description": "Looking for a junior Python developer to join our backend team.",
-    "required_skills": ["Python", "Flask", "SQL", "Git"]
+    "title": "AWS Cloud Architect (W2 Only)",
+    "company": "iPivot",
+    "location": "New York, NY",
+    "description": "Role: AWS Cloud ArchitectLocation: NYC NY3 Days Hybrid from Day 1Client: JefferiesLooks for 17+ years of experience.\nWe need expert in AWS.\nImportant Pointers: Candidate should have strong SRE (Site Reliability Engineer) background.Recent at least 8-10+ years from Infrastructure background.Expert in DevOps like Terraform, Docker, Container etc / SRE.Expert in AWS like AWS VPC Networking, AWS Control Panel, Landing Zone etcHe should be able to migrate on prem infrastructure services to AWS.He should be able to create various automation template for reusability using tech stack like Terraform, Cloudformation, Bash, Powershell etcHe should be an expert on understanding various AWS storage services and there use cases.\nQualificationsAdvanced cloud implementation experience using compute, storage, networking, and security services and cloud native best practices on AWS.Proven background working in an enterprise IT environment.Familiar with IaC tools, Terraform, CloudFormationDesign capabilities aligned with the well-architected framework.EC2, Unix/Linux, User Data, AnsibleKubernetes, ServerlessExperience with Kafka a plus.Networking and Security Identity and Access Management (IAM)Pytho",
+    "required_skills": [
+      "Python",
+      "Docker",
+      "AWS",
+      "Linux",
+      "Leadership"
+    ]
   },
   {
-    "title": "Data Analyst Intern",
-    "company": "Daraz",
-    "location": "Karachi, Pakistan",
-    "description": "Hiring data analyst interns to work on e-commerce analytics.",
-    "required_skills": ["SQL", "Excel", "Python", "Power BI"]
+    "title": "Azure Cloud Engineer",
+    "company": "Scion Staffing",
+    "location": "Oakland, CA",
+    "description": "Scion Technology has been engaged to conduct an immediate search for an experienced IT Systems Engineer for our client, a wonderful renewable energy organization in Oakland, CA! In this role, you’ll work with the IT team to provide top level support to networks, systems, and users. This is a full time, direct hire, hybrid (2 days a week onsite) role!\nPerks:to be part of an established sustainable energy leader!work culture and an experienced IT team!range is $120k+, depending on experience\nWhat you will be doing:Cloud infrastructure (Azure) including design, development, configuration, deployment of virtual machines/networks, and using containerization technologiesand enhance automation scripts using PowerShell, Linux Shell, and Pythonall physical and virtual IT systems are optimized, monitored, supported, secure and in compliance with policies and best practicesissues; perform root cause analysis, reactively and proactively support and resolve issues, with managed services partners/vendorsdocumentation for all corporate hardware, software, services, and infrastructuresoftware and deploy hardware as needed\nWhat you will need:degree in IT related field preferredin managing IT System",
+    "required_skills": [
+      "Python",
+      "AWS",
+      "Linux",
+      "Leadership"
+    ]
   },
   {
-    "title": "Frontend Developer",
-    "company": "Bazaar Technologies",
-    "location": "Karachi, Pakistan",
-    "description": "Join our frontend team building user-facing features.",
-    "required_skills": ["React", "JavaScript", "Tailwind", "Redux"]
+    "title": "Business Controlling, Full Value Chain Americas",
+    "company": "SKF Group",
+    "location": "Blue Bell, PA",
+    "description": "Business Controlling\n\nFull Value Chain Americas\n\nLocation: Blue Bell, PA\n\nAbout SKF\n\nSKF has been making the world spin since 1907! \n\nSKF is an industry-leading manufacturer dedicated to a culture of belonging, where our people flourish in an equitable environment that promotes leadership development and career growth. SKF bearings played an integral role in helping Mars Rover collect rock and regolith samples on the planet’s surface.\n\nAs an SKF team member, you will join 40,000 colleagues from more than 130 countries developing bearing technology and services that make rotation more reliable and sustainable. Sustainability is at the heart of everything we do. SKF aims to have net zero greenhouse gas emissions at all our production facilities by 2030.\n\nSKF products keep vehicles rolling, power the machines that put food on your table, and even reach into the cosmos as part of the Mars rover mission. Founded in Sweden in 1907, today SKF is publicly traded on the Nasdaq Stockholm with annual sales in 2020 of approximately $10 billion.\n\nSummary\n\nThis position provides support and direction to the VP of Full Value Chain & Technology, and Product Line managers as well as Industrial manu",
+    "required_skills": [
+      "Communication",
+      "Leadership"
+    ]
   },
   {
-    "title": "Machine Learning Engineer",
-    "company": "Afiniti",
-    "location": "Islamabad, Pakistan",
-    "description": "Build ML models for call center optimization.",
-    "required_skills": ["Python", "TensorFlow", "SQL", "Scikit-learn"]
+    "title": "Construction Sales Engineer",
+    "company": "Pacific Rim Mechanical",
+    "location": "Riverside, CA",
+    "description": "Primary FunctionTo develop project opportunities for Pacific Rim Mechanical's Service Group by working with existing clients and by building new relationships.\n\nTypical DutiesPrimary focus on owner-direct repairs, replacements, retrofits, and tenant improvements.Identifying and developing business opportunities with new and existing customers by utilizing your product knowledge & applications experience in the HVAC marketSuccessfully match customer pain/requirements to proposed solutionsCreate and deliver presentations that clearly communicate the uniqueness of the value propositionObtain, assemble, and organize all project documentation to turnover to operations\nSkills, Knowledge, Qualifications, & Experience-Proven work experience as a Sales EngineerProven track record selling complex solutionsAbility to forge strong, long-lasting relationships with senior executivesAbility to creatively explain and present complex concepts in an easy-to-understand mannerExcellent written and verbal communication skillsExcellent presentation and creativity skillsThis position requires a strong technical or mechanical background along with the ability to learn engineering conceptsHunter mindset wi",
+    "required_skills": [
+      "Communication",
+      "Leadership"
+    ]
   },
   {
-    "title": "DevOps Engineer",
-    "company": "Careem",
-    "location": "Lahore, Pakistan",
-    "description": "Manage cloud infrastructure and CI/CD pipelines.",
-    "required_skills": ["AWS", "Docker", "Linux", "Jenkins"]
+    "title": "Data Team Lead",
+    "company": "Storm2",
+    "location": "San Francisco County, CA",
+    "description": "Founding Data Lead -Permanent🏢 AI-powered Web3 Security platform💸 Up to $200k +Stock Option🌐 US San Francisco Bay Area/ hybrid open to other commutable areas\nOur key client is a US an AI-powered Web3 Security platform, which have had 5 rounds of funding and raised millions of dollars. They are looking for a Founding Engineer who can create, construct, and manage the infrastructure and backend of the platform, which powers all facets of their research and product development.\n⚡Requirements:\n3+ years professional experience in Python, Kubernetes, GitCapacity to manage the extensive responsibilities of handling the company's founding member roleHave a slight obsession with engineering and data Able to handle the breadth of scope as a founding member of the company AI, Machine Learning, and Data Engineering web3 technologies and products is a plus but not a mustFinancial experience is a plus but not a must\n\n⚡The role:Full timeDevelop, construct, and manage their data infrastructure, which is powered by both internal and external sources and supports important research and product Work closely with customers and internal researchers to deliver data-driven security solutions Have a stron",
+    "required_skills": [
+      "Python",
+      "Kubernetes"
+    ]
   },
   {
-    "title": "QA Engineer",
-    "company": "Confiz",
-    "location": "Rawalpindi, Pakistan",
-    "description": "Write automated tests and ensure software quality.",
-    "required_skills": ["Selenium", "Java", "Python", "JUnit"]
+    "title": "Director, Employee Availability &amp; Labor Cost/Absentee Control",
+    "company": "Metropolitan Transportation Authority",
+    "location": "New York, NY",
+    "description": "Description  JOB TITLE: Director, Employee Availability & Labor Cost/Absentee Control SALARY RANGE: $140,000 - $155,000 HAY POINTS: 890 DEPT/DIV: Labor Relations SUPERVISOR: Senior Director, Administrative Trials & Hearings, Employee Availability & Cost Control LOCATION: 2 Broadway HOURS OF WORK: 8am-4:30 pm or 9am-5:30pm (7 hours) DEADLINE: Open Until Filled This position is eligible for telework which is currently one day per week. New hires are eligible to apply 30 days after their effective date of hire. SUMMARY: This position manages, develops, implements, and enforces collective bargaining provisions, NYC Transit policies and programs relative to employee availability and labor cost control, including overseeing audits and investigation of sick abuse and fraud, theft of time, and chronic absenteeism, as well as initiate related disciplinary action. The incumbent also analyzes and tracks employee availability trends, including creating performance metrics to measure progress, identifies vulnerabilities in absentee control monitoring, designing strategic improvement plans and initiatives, as well as prepares related presentation for senior management and staff. Incumbent also p",
+    "required_skills": [
+      "Communication",
+      "Leadership"
+    ]
   },
   {
-    "title": "Backend Developer",
-    "company": "Tintash",
-    "location": "Lahore, Pakistan",
-    "description": "Build scalable backend services using Node.js.",
-    "required_skills": ["Node.js", "Express", "MongoDB", "PostgreSQL"]
+    "title": "Fixed Income Data Modeler",
+    "company": "Sedna Consulting Group",
+    "location": "Newark, NJ",
+    "description": "Job Title - : Fixed Income Data Modeler Location: New Jersey- Onsite Duration – 12 months  Requirement:Your Required Skills· 7+ years of experience of in Data Modeling and Database Designing in Relational and Non-Relational Database, at least 5+ years in Financial Industries focused on Fixed Income Products,· Bachelor's degree in Computer Science, Information Systems, or a related field.· Proficiency in SQL, data querying, and performance optimization techniques.· Proficiency in using Data Modeling tools like Erwin, ER Studio and DBT.· Expert experience in building Dimensional as well as highly normalized data models for OLTP.· Familiarity with cloud infrastructure technologies like containers, Kubernetes, and serverless computing.· Experience working with Data Governance tools like Collibra, Informatica.· Experience building catalogues, business terms, technical metadata and data lineage.· Excellent problem-solving and analytical skills, with the ability to translate business requirements into technical solutions.· Strong experience with data structures, data modeling, data lineage and data catalogues.Your Desired Skills:· Experience with Snowflake highly desirable · Certification",
+    "required_skills": [
+      "SQL",
+      "Kubernetes",
+      "AWS"
+    ]
   },
   {
-    "title": "Mobile Developer",
-    "company": "VentureDive",
-    "location": "Karachi, Pakistan",
-    "description": "Build cross-platform mobile apps using Flutter.",
-    "required_skills": ["Flutter", "Dart", "Firebase", "Git"]
+    "title": "Full Stack Engineer",
+    "company": "Ideando Inc",
+    "location": "United States",
+    "description": "Location: Remote\nCompany Overview:SkillFit, a subsidiary of Ideando Inc. is a cutting-edge AI-powered platform that revolutionizes the talent acquisition process by connecting job seekers with recruiters in a seamless and efficient manner. Our mission is to leverage technology to enhance the job search experience for both candidates and employers, ultimately driving better outcomes and reducing frustration in the hiring process.\nPosition Overview:We are seeking a talented and experienced Freelance Full-Stack Software Engineer to collaborate with our dynamic team on a project basis. The ideal candidate will have a passion for building innovative software solutions, a strong foundation in both front-end and back-end technologies, and a desire to contribute to a fast-paced startup environment.\nKey Responsibilities:1. Collaborate with the product team to understand requirements, design solutions, and implement new features and functionalities for SkillFit's platform.2. Develop robust, scalable, and maintainable code across the full stack, including front-end UI components, back-end services, database integrations and API connectivity.3. Participate in code reviews, architectural discus",
+    "required_skills": [
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "MongoDB",
+      "AWS",
+      "Communication"
+    ]
   },
   {
-    "title": "UI/UX Designer",
-    "company": "NetSol",
-    "location": "Lahore, Pakistan",
-    "description": "Design user interfaces and experiences.",
-    "required_skills": ["Figma", "Adobe XD", "Prototyping"]
+    "title": "Heavy Maintenance Manager",
+    "company": "Satair",
+    "location": "Peachtree City, GA",
+    "description": "Job Description For External PostingSatair is looking for a Heavy Maintenance Manager to join our Customer Order Fulfillment team based in Peachtree City, GA.\nAs a Heavy Maintenance Manager you work as a project manager supporting Maintenance Centers and Airlines A220 c-check activity. You will be responsible for the complete customer order handling process for c-check part requirements and coordinate a multi functional team to collaborate and work towards expediting and delivering all parts on-time. You will also lead customer meetings while presenting to customers the c-check orders status, addressing concerns and aligning on priorities.\nYou will get an exciting job in an innovative, growing, global company with a world-class service ambition. Our culture is non-bureaucratic, with a hands-on professional approach and customer-centric outlook. What we do is so much more than distribution, support and service; we deliver excellence when it’s needed and where it’s needed, so people all over the world can connect.\nYour working environment:Just outside of Atlanta is one of ten of Satair’s global locations. Established in 1986, this site hosts Commercial, Human Resource, Customer Order",
+    "required_skills": [
+      "Communication",
+      "Leadership"
+    ]
   },
   {
-    "title": "Data Engineer",
-    "company": "10Pearls",
-    "location": "Islamabad, Pakistan",
-    "description": "Build data pipelines and ETL processes.",
-    "required_skills": ["Python", "SQL", "Spark", "Airflow"]
+    "title": "Hiring for the role of Azure Cloud Engineer",
+    "company": "VDart",
+    "location": "Hartford, CT",
+    "description": "Job Role: Azure Cloud Engineer Work Location: Hartford, CT (Hybrid Working 3 Days in office)Contract (C2C/W2)\nNote: Locals Preferred, Look for Infra Candidates – Azure Cloud Engineer with Office 365 experience. Don’t submit DevOps candidate. Microsoft Azure certifications a must, such as:Microsoft Certified Solutions Associate (MCSA)Microsoft Certified Solutions Expert (MCSE)Microsoft Certified Solutions Developer (MCSD)\nJob Description:We are looking for high-caliber consulting engineer who will lead our Microsoft Azure and Cloud Solutions Partner capability portfolio. The ideal candidate will have deep operational, technical, delivery, and implementation experience in Microsoft's cloud portfolio (Azure and Productivity products such as Office 365).Familiarity and knowledge of Microsoft Azure and Office 365 architecture and use cases.Knowledge of Microsoft Cloud Solutions Partner program.Direct experience with Microsoft Azure suite of products.Direct experience with consulting engineering efforts including implementation, configuration, and operation.Excellent verbal/written communication and organization skills with ability to facilitate meetings, conduct trainings, and conductin",
+    "required_skills": [
+      "Communication",
+      "Project Management"
+    ]
   },
   {
-    "title": "Full Stack Developer",
-    "company": "Educative",
-    "location": "Lahore, Pakistan",
-    "description": "Build interactive learning platforms.",
-    "required_skills": ["React", "Node.js", "MongoDB", "JavaScript"]
+    "title": "Instrumentation Manufacturing Engineer Intern",
+    "company": "Promega Corporation",
+    "location": "Madison, WI",
+    "description": "JOB OBJECTIVE: The Manufacturing Engineer Intern will work with R&D, Project Management, QA/RA and Manufacturing to improve the design of our instruments for manufacturability and serviceability, own the design transfer process, and improve the quality and efficiency of manufacturing.\n\nCORE DUTIES:\n\n Participate in the design and review of instrument designs to maximize their manufacturability and serviceability. Assist production with problems encountered during the assembly and test process. Execute design changes required by obsolescence of instrument components or by changes in regulations. Participate in the Materials Review Board to help determine the disposition of non-conforming raw materials. Train and participate in the \"Lean Manufacturing\" movement in the Operations department including cellular manufacturing, reduced set-up times, and overall waste reduction. Document and implement process improvements for sustainability. Participate in evaluation and interaction with suppliers. Test process troubleshooting, device debugging and NCR resolution. PCBA failure mode diagnostic and debugging. Demonstrates inclusion through their own words and actions and is accountable for a",
+    "required_skills": [
+      "Communication",
+      "Project Management"
+    ]
   },
   {
-    "title": "Cloud Engineer",
-    "company": "Mobilink",
-    "location": "Islamabad, Pakistan",
-    "description": "Manage cloud infrastructure on AWS and Azure.",
-    "required_skills": ["AWS", "Azure", "Kubernetes", "Terraform"]
+    "title": "Maintenance Engineer",
+    "company": "Altair",
+    "location": "Troy, MI",
+    "description": "Transforming the Future with Convergence of Simulation and Data\nMaintenance Engineer \nJob Summary:Our client in Troy, MI is looking for a Maintenance Engineer. This is a contract position.\nWhat You Will Do:We are seeking a skilled and proactive plant Maintenance Engineer to join our dynamic team. In this role, you will play a crucial part in ensuring the reliability, efficiency, and optimal performance of our manufacturing equipment and facilities within our manufacturing plant.\nResponsibilities:Prioritize safety above all to protect our team members, partners, and customers.Develop and implement maintenance strategies to ensure the continuous operation of the plant manufacturing equipment, machinery, and facilities.Conduct preventive maintenance activities to minimize downtime and extend the lifespan of equipment.Collaborate with cross-functional teams to understand the different systems design requirements and provide insights on maintenance considerations for new equipment installations.Perform troubleshooting and diagnostic assessments of equipment malfunctions and implement corrective actions.Oversee the coordination and execution of equipment repairs, replacements, and upgrad",
+    "required_skills": [
+      "Go",
+      "Communication"
+    ]
   },
   {
-    "title": "iOS Developer",
-    "company": "Telenor",
-    "location": "Islamabad, Pakistan",
-    "description": "Build iOS apps using Swift.",
-    "required_skills": ["Swift", "SwiftUI", "iOS", "Git"]
+    "title": "Network Engineer Senior",
+    "company": "CooperVision",
+    "location": "Gilbert, AZ",
+    "description": "Job Description\n\nCooperVision, a division of CooperCompanies (NASDAQ:COO), is one of the world’s leading manufacturers of soft contact lenses. The Company produces a full array of daily disposable, two-week and monthly contact lenses, all featuring advanced materials and optics. CooperVision has a strong heritage of solving the toughest vision challenges such as astigmatism, presbyopia and childhood myopia; and offers the most complete collection of spherical, toric and multifocal products available. Through a combination of innovative products and focused practitioner support, the company brings a refreshing perspective to the marketplace, creating real advantages for customers and wearers. For more information, visit www.coopervision.com\n\nJob Summary:\n\nResponsibilities include, but are not limited to tasks, such as network upgrades, maintenance, performance tuning, and operating system hardening. In addition, the Senior Systems Engineer will be responsible for the monitoring of incoming service requests, incidents, and projects to ensure that they are completed in a timely and high-quality manner. This position will work closely with other IT departments to guarantee reliable sys",
+    "required_skills": [
+      "Python",
+      "Docker",
+      "AWS",
+      "Problem Solving",
+      "Project Management"
+    ]
   },
   {
-    "title": "Android Developer",
-    "company": "Careem",
-    "location": "Lahore, Pakistan",
-    "description": "Build Android apps using Kotlin.",
-    "required_skills": ["Kotlin", "Android", "Jetpack", "Git"]
+    "title": "Patient Liaison",
+    "company": "Bryan Health",
+    "location": "Lincoln, NE",
+    "description": "General Summary\n\nServes as a central intermediary resource and coordinator for customer feedback from patients and families regarding service and or quality of care provided at Bryan Medical Center (BMC). Works directly with various members of the healthcare team, hospital departments, and administration in providing support, guidance, and direction for proactive and reactive problem solving and ensuring resolution of patient experience concerns.\n\nFacilitates the Bryan Medical Center Grievance Committee and attends or leads other committees to communicate patient experience concerns and facilitate process improvement activities that align with the organization’s Strategic and Quality and Patient Safety Plan.\n\nPrincipal Job Functions\n\n*Commits to the mission, vision, beliefs and consistently demonstrates our core values.*Takes appropriate action to resolve patient complaints in compliance with U.S. Centers for Medicare and Medicaid Services (CMS) grievance requirements as set forth in Hospital Conditions of Participation.*Responsible for leading the BMC Grievance Committee; setting agenda, communicating key findings, and documenting actions taken by committee. *Promotes knowledge of",
+    "required_skills": [
+      "Communication",
+      "Leadership",
+      "Problem Solving"
+    ]
   },
   {
-    "title": "Security Analyst",
-    "company": "Trillium",
-    "location": "Karachi, Pakistan",
-    "description": "Monitor security threats.",
-    "required_skills": ["Network Security", "Linux", "Python", "SIEM"]
+    "title": "Principal Backend Engineer",
+    "company": "HireBus",
+    "location": "United States",
+    "description": "Principal Backend Engineer - Join HireBus and Revolutionize Small Business Hiring!\nAt HireBus, we're on a mission to transform the way small businesses hire top talent. By combining cutting-edge AI technology with powerful psychological insights, we help owners focus on the top 1% of candidates, ensuring they make the best possible hires. If you're passionate about using technology to solve real-world problems and making a difference in the lives of small business owners, this is the perfect opportunity for you!\nWho You Are:\nA visionary who thrives on tackling challenges that others haven't dared to solveA believer in the power of technology to make our lives betterObsessed with understanding and serving our users - the hardworking, independent small business owners who are the backbone of our communitiesFearless in the face of opportunity, ready to sprint towards incredible solutionsA technologically savvy genius excited to push the boundaries of what's possible\nWhat You'll Do:\nArchitect and build scalable, test-driven backend systems that power our AI-driven hiring platformCollaborate with cross-functional teams to translate business requirements into robust technical solutionsOp",
+    "required_skills": [
+      "TypeScript",
+      "Node.js",
+      "AWS",
+      "Communication"
+    ]
   },
   {
-    "title": "Database Administrator",
-    "company": "Systems Limited",
-    "location": "Lahore, Pakistan",
-    "description": "Manage and optimize databases.",
-    "required_skills": ["PostgreSQL", "MySQL", "SQL", "Backup"]
+    "title": "Procurement Quality Engineer",
+    "company": "SKF Group",
+    "location": "Falconer, NY",
+    "description": "Location: Falconer, NY\n\nSalary range: $70,000 - $84,000 Per Year\n\nAbout SKF\n\nSKF has been making the world spin since 1907! \n\nSKF is an industry-leading manufacturer dedicated to a culture of belonging, where our people flourish in an equitable environment that promotes leadership development and career growth. SKF bearings played an integral role in helping Mars Rover collect rock and regolith samples on the planet’s surface.\n\nAs an SKF team member, you will join 40,000 colleagues from more than 130 countries developing bearing technology and services that make rotation more reliable and sustainable. Sustainability is at the heart of everything we do. SKF aims to have net zero greenhouse gas emissions at all our production facilities by 2030.\n\nSKF products keep vehicles rolling, power the machines that put food on your table, and even reach into the cosmos as part of the Mars rover mission. Founded in Sweden in 1907, today SKF is publicly traded on the Nasdaq Stockholm with annual sales in 2020 of approximately $10 billion.\n\nSummary\n\nProcurement Quality Engineer will report to the Falconer Aeroengine Quality Manager. In this position, you will have the opportunity to work closely",
+    "required_skills": [
+      "Communication",
+      "Leadership"
+    ]
   },
   {
-    "title": "Product Manager",
-    "company": "Daraz",
-    "location": "Karachi, Pakistan",
-    "description": "Lead product development.",
-    "required_skills": ["Agile", "Product Strategy", "Analytics"]
+    "title": "Product Validation Engineer (EVT/DVT)",
+    "company": "ANELLO",
+    "location": "Santa Clara, CA",
+    "description": "About Anello Photonics:ANELLO Photonics http://www.anellophotonics.com is a leading-edge technology company based in Santa Clara, CA. The company has developed integrated photonic system-on-chip technology for next generation navigation. ANELLO's SIPHOG™ gyroscope is based on its patented photonic integrated circuit technology. The result is a product that is higher performance, much smaller size and weight, at a fraction of the cost of traditional gyros used in industrial, aerospace and military applications. It enables reliable and accurate navigation and positioning across many autonomous applications. Anello is currently engaged in commercial trials with various market-leading customers in the Construction, Farming, Trucking, Unmanned Aerial Vehicles, Autonomous Vehicles, and National Security segments. Generous benefits, competitive pay, appreciating equity, and a collaborative culture make Anello the workplace of choice for accomplished and motivated engineers. \nJob Summary:The Product Validation Engineer (EVT, DVT, PVT) will conceive, execute, and interpret design validation and engineering verification testing programs for the lifecycle of Anello’s ingredient and product po",
+    "required_skills": [
+      "Communication",
+      "Leadership"
+    ]
   },
   {
-    "title": "Technical Writer",
-    "company": "Educative",
-    "location": "Lahore, Pakistan",
-    "description": "Write technical documentation.",
-    "required_skills": ["Technical Writing", "Markdown", "Git"]
+    "title": "Remote - Software Engineer - OIPA Configurator",
+    "company": "State Farm",
+    "location": "Dunwoody, GA",
+    "description": "Overview\n\nWe are not just offering a job but a meaningful career! Come join our passionate team!\n\nAs a Fortune 50 company, we hire the best employees to serve our customers, making us a leader in the insurance and financial services industry. State Farm embraces diversity and inclusion to ensure a workforce that is engaged, builds on the strengths and talents of all associates, and creates a Good Neighbor culture.\n\nWe offer competitive benefits and pay with the potential for an annual financial award based on both individual and enterprise performance. Our employees have an opportunity to participate in volunteer events within the community and engage in a learning culture. We offer programs to assist with tuition reimbursement, professional designations, employee development, wellness initiatives, and more!\n\nVisit our Careers page for more information on our benefits, locations and the process of joining the State Farm team!\n\nREMOTE: Qualified candidates (outside of hub locations listed below) may be considered for remote work arrangements based on where a candidate currently resides or is currently located.\n\nHYBRID: Qualified candidates (in or near hub locations listed below) sho",
+    "required_skills": [
+      "Java",
+      "React",
+      "Angular",
+      "Oracle",
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "Communication"
+    ]
   },
   {
-    "title": "Blockchain Developer",
-    "company": "Afiniti",
-    "location": "Islamabad, Pakistan",
-    "description": "Build blockchain applications.",
-    "required_skills": ["Solidity", "Ethereum", "Web3", "JavaScript"]
+    "title": "SOC Security Analyst/Engineer",
+    "company": "Akidev Corporation",
+    "location": "Fremont, CA",
+    "description": "Job title: SOC Security Engineer/AnalystLocation: Fremont, CA (On-Site) - Rotational shiftDirect clientOpen for both C2C & W2\nThe Role We are looking for a highly motivated security professional specializing in security monitoring, detection, and incident response to join the global security operations team to protect Tesla's information, infrastructure, and products. It's fun to work in a company where employees BELIEVE in what they're doing! The Security Operations Center (SOC) is at the frontline of the Client's multilayered defense and is responsible for detecting and responding to threats against our corporate, manufacturing, and production environments. As a SOC Analyst, you will protect Tesla by acting as the primary line of defense by identifying, analyzing, and remediating threats in our environment. You will be involved in investigating and responding to SIEM alerts and active attacks, user security-related questions/reports, incident response (war room, remote bridges), and ongoing maintenance, tuning, and improvements of the detection signals.\nResponsibilities:The first layer of defense - responsible for quick detection and incident response using various security monit",
+    "required_skills": [
+      "Python",
+      "AWS"
+    ]
   },
   {
-    "title": "AI Research Assistant",
-    "company": "10Pearls",
-    "location": "Karachi, Pakistan",
-    "description": "Research AI/ML algorithms.",
-    "required_skills": ["Python", "Machine Learning", "TensorFlow"]
+    "title": "Senior Cloud DevOps Engineer - Remote",
+    "company": "Perficient",
+    "location": "United States",
+    "description": "Job Description\n\nWe currently have a career opportunity for a Senior Cloud DevOps Engineer to join our Product Development Consulting Business Unit. This is a remote position located anywhere in the United States.\n\nAs a Senior Cloud DevOps Engineer, you will be responsible for executing high quality solutions for customers and contributing to the day-to-day technical excellence of a delivery team. As a core member of a project team, you will participate in all aspects of the software development lifecycle, which includes sizing, technical design, implementation, documentation, testing, deployment and support of applications developed for our clients. You will work closely with solution architects and developers to translate architecture and technical requirements into technical design. As a member working in a team environment you will take direction from solution architects and Leads on implementation activities.\n\nPerficient is always looking for the best and brightest talent and we need you! We’re a quickly-growing, global digital consulting leader, and we’re transforming the world’s largest enterprises and biggest brands. You’ll work with the latest technologies, expand your ski",
+    "required_skills": [
+      "Oracle",
+      "Kubernetes",
+      "Communication",
+      "Problem Solving"
+    ]
   },
   {
-    "title": "Scrum Master",
-    "company": "NetSol",
-    "location": "Lahore, Pakistan",
-    "description": "Facilitate Agile ceremonies.",
-    "required_skills": ["Scrum", "Agile", "JIRA", "Leadership"]
+    "title": "Senior Developer – React Native",
+    "company": "Avesta Computer Services",
+    "location": "Austin, Texas Metropolitan Area",
+    "description": "Job Title: Senior Developer – React NativeLocation: Austin, TexasType: FulltimeContract to Hire option available for this roleTechnical Skills:5 + years of professional experience developing mobile applications with React Native for B2CStrong understanding of JavaScript (ES6+) and React fundamentals.Proficiency in React Native core concepts like components, props, state, and lifecycle methods.Experience with asynchronous reactive programming and API calls.Experience with integrating third-party libraries and APIs into React Native applications.Experience with styling libraries like Flexbox or styled-components.Experience with Redux or equivalent state management solution.Working knowledge of native development concepts for iOS and Android would be a huge advantage.Exposure to User Experience related conceptsExcellent problem-solving and debugging skills.Strong communication and collaboration skillsRole and Responsibilities:Design, develop, and maintain high-quality, performant React Native applications.Collaborate with designers and back-end developers to translate UI/UX mockups and prototypes into functional mobile app experiences.Write clean, maintainable, and reusable JavaScript",
+    "required_skills": [
+      "JavaScript",
+      "React",
+      "Communication"
+    ]
   },
   {
-    "title": "Salesforce Developer",
-    "company": "Confiz",
-    "location": "Rawalpindi, Pakistan",
-    "description": "Build on Salesforce platform.",
-    "required_skills": ["Salesforce", "Apex", "Lightning", "JavaScript"]
+    "title": "Senior Product Manager",
+    "company": "LHH",
+    "location": "Dallas, TX",
+    "description": "LHH is actively seeking a seasoned Senior Product Manager to join our Dallas-based client's team. With a minimum of 5 years of experience and a proven track record in product development and strategy execution, this role offers the opportunity to drive growth, collaborate with cross-functional teams, and optimize procurement processes. \nRequirements:Bachelor’s degree from an accredited UniversityMinimum 5 years of Product Management experience - must have experience with a TANGIBLE productDemonstrated success in planning, executing, and tracking product releases with partners \nResponsibilities:Develop and execute product roadmap and growth strategyCollaborate with Marketing on product launches and specificationsLead product knowledge training and financial performance trackingOptimize procurement processes and vendor partnershipsDrive programs to support marketing and category growth \nSkills:Strong presentation and communication abilitiesBusiness acumen and demand forecasting skillsAbility to align with sales and marketing for effective strategiesStrategic thinking and project management prowess",
+    "required_skills": [
+      "Communication",
+      "Project Management"
+    ]
   },
   {
-    "title": "Network Engineer",
-    "company": "Telenor",
-    "location": "Islamabad, Pakistan",
-    "description": "Design and maintain networks.",
-    "required_skills": ["Cisco", "TCP/IP", "Routing", "Firewalls"]
+    "title": "Software Implementation Program Manager",
+    "company": "Akshaya Inc",
+    "location": "Cupertino, CA",
+    "description": "Title: Software Implementation Program ManagerLocation:Cupertino, CA (Work from office 3 days in hybrid model).\n\nWe're looking for a Program Manager to join our Environmental Technologies Full Material Disclosure (FMD) team. If you have experience supporting enterprise systems, take the entrepreneurial approach to problem solving, have strong leadership and communication skills, and you're comfortable stabilizing and coordinating a variety of complex activities, you could be an excellent fit.\nDescriptionThe Software Implementation Program Manager on the FMD Team will blend business analysis and daily operations to deliver software solutions that support the environmental product compliance during the development, manufacturing, and service of all Apple products.\nResponsibilities include:* Drive, track, and support the execution of the FMD program implementation roadmap and manage sprint releases* Define program plans and provide oversight of tasks and action items* Monitor, review, and adjust project progress and timelines as needed* Support development of requirements and proposals for improved process and system solutions* Provide support for external projects where FMD input is",
+    "required_skills": [
+      "Oracle",
+      "Communication",
+      "Leadership",
+      "Problem Solving"
+    ]
   },
   {
-    "title": "Game Developer",
-    "company": "Tintash",
-    "location": "Lahore, Pakistan",
-    "description": "Build mobile games.",
-    "required_skills": ["Unity", "C#", "Game Design"]
+    "title": "Sr C++ Developers",
+    "company": "SKILL BIRD",
+    "location": "United States",
+    "description": "Job Title: Sr C++ DevelopersLocation: REMOTEDuration: FULL TIME   Visa: USC/GCInterview Mode: Photo & Video  JOB DESCRIPTION \n﻿C++, Linux, Trading Systems, FIX Protocol-MUST HAVES\n Currently looking for a highly motivated C++ Trading Systems Developer with demonstrated experience in designing, developing and delivering core production software solutions in a mission critical trading systems environment. Major responsibilities include:\n· Assessing business and systems requirements and developing functional specifications· Designing and developing high quality, high performance trading systems software written in C++ to meet deliverable timelines and requirements · Adhering to the software development life cycle process/methodology · Building business level subject matter expertise in trading systems functionality and processing · Provide second level support for production on an ad hoc basis when necessary Location: · The developer will be an integral part of a core development team and report to the Trading System Development management team. Qualifications: · Strong knowledge of the logical business domain and transaction handling (i.e. functional programming of business logic) in",
+    "required_skills": [
+      "Python",
+      "Linux",
+      "Communication"
+    ]
   },
   {
-    "title": "Business Analyst",
-    "company": "Systems Limited",
-    "location": "Lahore, Pakistan",
-    "description": "Bridge business and tech teams.",
-    "required_skills": ["SQL", "Excel", "Communication", "Agile"]
+    "title": "Sr Data Engineer with Kafka",
+    "company": "ZenithMinds Inc",
+    "location": "Austin, TX",
+    "description": "Data Engineer with Kafka (W2 Only)💯% Remote\nMin 10 to12+ strong development experience neededVery strong experience in Kafka and Kafka data injection Strong exp in working with API.Strong exp in Python with AWS.Experience with Informatica IICS and Snowflake. Expertise in Snowflake's cloud data platform, including data loading, transformation, and querying using Snowflake SQL.Experience with SQL-based development, optimization, and tuning for large-scale data processing.Strong understanding of dimensional modeling concepts and experience in designing and implementing data models for analytics and reporting purposes.hands-on experience in IICS or Informatica Power Center ETL development1+ years of hands-on experience in Linux and shell scripting.1+ years of experience working with git.1+ years of related industry experience in an enterprise environment.1+ years of hands-on experience in Python programming.",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Git",
+      "AWS",
+      "Linux"
+    ]
   },
   {
-    "title": "React Native Developer",
-    "company": "Bazaar",
-    "location": "Karachi, Pakistan",
-    "description": "Build cross-platform mobile apps.",
-    "required_skills": ["React Native", "JavaScript", "Redux", "Git"]
+    "title": "Sr Programmer Analyst Oracle EBS",
+    "company": "CooperVision",
+    "location": "Victor, NY",
+    "description": "Job Description\n\nCooperVision, a division of CooperCompanies (NASDAQ:COO), is one of the world’s leading manufacturers of soft contact lenses. The Company produces a full array of daily disposable, two-week and monthly contact lenses, all featuring advanced materials and optics. CooperVision has a strong heritage of solving the toughest vision challenges such as astigmatism, presbyopia and childhood myopia; and offers the most complete collection of spherical, toric and multifocal products available. Through a combination of innovative products and focused practitioner support, the company brings a refreshing perspective to the marketplace, creating real advantages for customers and wearers. For more information, visit www.coopervision.com\n\nJob Summary:\n\nAnalysis, design, programming, testing, and implementation of new and existing software applications in the Oracle E-Business Suite environment in accordance with user requirements.\n\nEssential Functions & Accountabilities:\n\n Analyze technical requests from users related to Oracle e-Business 12.x for new extensions, interfaces, reports, standard program changes, etc. and recommend necessary action  Provide technical design for Oracl",
+    "required_skills": [
+      "Java",
+      "SQL",
+      "Oracle",
+      "Communication",
+      "Project Management"
+    ]
   },
   {
-    "title": "Site Reliability Engineer",
-    "company": "Careem",
-    "location": "Lahore, Pakistan",
-    "description": "Ensure system reliability.",
-    "required_skills": ["AWS", "Kubernetes", "Python", "Linux"]
+    "title": "Sr QA Analyst, Claims",
+    "company": "Healthfirst",
+    "location": "North Carolina, United States",
+    "description": "The Sr QA Analyst Claims assists QA team in ensuring overall quality assurance, and is responsible for driving in-sprint automation with Java, Selenium. The Sr QA Analyst Claims is responsible for bottom-line ownership for ensuring testing of all assigned initiatives are completed on time with quality outcomes. QA Lead supports and works with peers on integration, downstream testing to ensure no defects impact production processes. The Sr QA Analyst Claims is the subject-matter-expert (SME) in Claims, test automation, test data creation automation and enterprise test strategy definition, and embodies Healthfirst’s Culture Drivers promoting and reinforcing behavior consistent with Healthfirst culture. The role ensures all strategic and operational projects meet the highest quality by following industry recognized QA methodologies and best practices.\n\nJob Description\n\nDuties & Responsibilities:\n\nOwns the overall roadmap of automation solutions in collaboration with development and QA team.Develops reusable automation components for Pega based and other applicationsMentors automation engineers in team to optimize automation outcomesDevelops utilities to enable test data automationPerf",
+    "required_skills": [
+      "Java",
+      "Jenkins",
+      "Communication",
+      "Leadership"
+    ]
   },
   {
-    "title": "Data Scientist",
-    "company": "Daraz",
-    "location": "Karachi, Pakistan",
-    "description": "Build predictive models.",
-    "required_skills": ["Python", "SQL", "Machine Learning", "Statistics"]
+    "title": "Sr. Project Engineer",
+    "company": "Bright Vision Technologies",
+    "location": "United States",
+    "description": "Bright Vision Technologies has an immediate opportunity for Sr. Project Engineer at Remote with (50% travel required)Candidate must have permanent work authorization and work for any employer without sponsorship now or in the future. Third party candidates are not eligible for this role.\nJob Title: Sr. Project EngineerLocation: Remote (Plus up to 50% travel)Duration: Full Time\nWhat are the 3-4 non-negotiable requirements of this position?Engineering DegreeMinerals Experience Project Management experience exceeding 5-10 yearsMust travel\nWhat are the nice-to-have skills?Minerals processing experience\nRequired Education, Experience, and Skills: Bachelor's degree in Chemical, Process or Mechanical Engineering or related fieldExperience should include a minimum of 6 years of project management or process improvement experience in an engineering and/or leadership capacity.Must have a demonstrated record of accomplishment in a manufacturing culture focused on safety, reliability, and process improvementAbility to interpret documents such as safety rules, operating and maintenance instructions, engineering drawings, and procedure manuals and write routine reports and correspondenceAbility",
+    "required_skills": [
+      "Leadership",
+      "Project Management"
+    ]
   },
   {
-    "title": "Embedded Engineer",
-    "company": "Mobilink",
-    "location": "Islamabad, Pakistan",
-    "description": "Develop firmware for IoT.",
-    "required_skills": ["C", "C++", "Microcontrollers", "IoT"]
+    "title": "Technical Support Engineer (VoIP / NTR / IPC)",
+    "company": "Resolution Technologies, Inc.",
+    "location": "New York City Metropolitan Area",
+    "description": "TECHNICAL SUPPORT ENGINEER CAREER OPPORTUNITYThe Technical Support Engineer is responsible for the on-site support and maintenance of compliance recording and assurance platforms at the customer’s site. This individual will manage product related issues and outages in a timely manner and enhance the client's ability to maintain the system. In addition, this engineer will assist with projects, installations, and change management as required to support the customer’s environment and infrastructure.\nTECHNICAL SUPPORT ENGINEER JOB DUTIES AND RESPONSIBILITIESWork directly with the customer's System Engineers to support the platform/solution infrastructure across their organization globally.Create record of the case and performing remediation in accordance to the severity of the case.Provide L2/L3 support as required for the technical support of the product, and utilize, engage and coordinate efforts with suppliers/other representatives as needed.Assist client's administrators with questions and problems associated with the configuration, administration, and management of users in the system.Document and maintain system specifications (Site Documentation) across all sites.Provide and ev",
+    "required_skills": [
+      "SQL",
+      "Express",
+      "Communication",
+      "Project Management"
+    ]
   },
   {
-    "title": "Technical Support",
-    "company": "Trillium",
-    "location": "Karachi, Pakistan",
-    "description": "Provide technical support.",
-    "required_skills": ["Linux", "SQL", "Networking", "Communication"]
+    "title": "Unpaid Internship: Development Team",
+    "company": "Bright Sparks",
+    "location": "United States",
+    "description": "Bright Sparks Academy Internship Program\nBefore you begin: The following is a unpaid internship position. You will receive volunteer hours based on work done. Please apply accordingly.\nLearn about Bright SparksImagine if Education was rebuilt from Ground-Zero. Paid became Free. Group became Private. Locked became Unlocked. Bright Sparks is an educational project allowing students including unprivileged students from Grades 1st to 8th to learn more than what's already here. Using personalized learning, no cost, and private sessions, Bright Sparks is on top other education businesses. Learn what you want, for free.\nAt Bright Sparks, the dedication you bring, can save young kids lives and make them educated. Bring your passion and commitment to the internship and there’s no telling what you could accomplish. At Bright Sparks, unique differences are what make us stronger. How you think, What we have experienced, and Who we are completely different in every individual. We believe including everyone from different aspects is necessary to be included in our environment, as well deliver services that serve everyone\nAt Bright Sparks, we embrace diversity and do not discriminate based on gen",
+    "required_skills": [
+      "JavaScript",
+      "React",
+      "Express",
+      "Teamwork",
+      "Leadership",
+      "Project Management"
+    ]
   }
 ]
