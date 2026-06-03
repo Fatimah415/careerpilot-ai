@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.venv/
+*.egg-info/
+
+# Database & uploads
+backend/careerpilot.db
+backend/uploads/
+
+# Dataset (too large for git)
+Dataset/
+
+# Environment
+.env
+.env.*
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
