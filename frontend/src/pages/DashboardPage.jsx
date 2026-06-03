@@ -6,10 +6,12 @@ import ProfileEditor from "../components/ProfileEditor";
 import SkillTag from "../components/SkillTag";
 import RecommendationsView from "../components/RecommendationsView";
 import ATSScoreView from "../components/ATSScoreView";
+import EmptyState from "../components/EmptyState";
 
 export default function DashboardPage() {
   const { user } = useAuth();
   const [cv, setCv] = useState(null);
+  const [cvLoading, setCvLoading] = useState(true);
   const [tab, setTab] = useState("cv");
   const [recsRefresh, setRecsRefresh] = useState(0);
   const [jobs, setJobs] = useState([]);
@@ -17,7 +19,8 @@ export default function DashboardPage() {
   useEffect(() => {
     api.get("/cv/me")
       .then((res) => setCv(res.data))
-      .catch(() => setCv(null));
+      .catch(() => setCv(null))
+      .finally(() => setCvLoading(false));
   }, []);
 
   useEffect(() => {
@@ -78,6 +81,13 @@ export default function DashboardPage() {
                 <h2 className="text-base font-semibold text-gray-800 mb-4">Upload your CV</h2>
                 <CVUpload onParsed={handleParsed} />
               </div>
+              {!cvLoading && !cv && (
+                <EmptyState
+                  icon="📄"
+                  title="Get started"
+                  description="Upload your CV above. We'll extract your skills and match you to the best jobs in seconds."
+                />
+              )}
               {cv?.skills?.length > 0 && (
                 <div>
                   <h3 className="text-sm font-semibold text-gray-700 mb-3">Detected Skills</h3>
@@ -106,6 +116,7 @@ export default function DashboardPage() {
           <RecommendationsView refreshTrigger={recsRefresh} />
         </div>
       </div>
+
     </div>
   );
 }

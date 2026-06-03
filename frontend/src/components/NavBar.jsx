@@ -11,16 +11,16 @@ export default function NavBar() {
   }
 
   return (
-    <nav className="bg-indigo-700 text-white px-6 py-3 flex items-center justify-between shadow">
+    <nav className="bg-indigo-700 text-white px-4 py-3 flex flex-wrap items-center justify-between gap-3 shadow">
       <Link to="/" className="text-xl font-bold tracking-tight">
         CareerPilot AI
       </Link>
-      <div className="flex items-center gap-6 text-sm font-medium">
+      <div className="flex items-center gap-4 flex-wrap text-sm font-medium">
         {user ? (
           <>
             <Link to="/dashboard" className="hover:text-indigo-200 transition">Dashboard</Link>
             <Link to="/jobs" className="hover:text-indigo-200 transition">Jobs</Link>
-            <span className="text-indigo-300">{user.full_name}</span>
+            <span className="text-indigo-300 hidden sm:inline">{user.full_name}</span>
             <button
               onClick={handleLogout}
               className="bg-white text-indigo-700 px-3 py-1 rounded hover:bg-indigo-100 transition"

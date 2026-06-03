@@ -1,15 +1,21 @@
 import { useEffect, useState } from "react";
 import api from "../lib/api";
 import JobCard from "../components/JobCard";
+import EmptyState from "../components/EmptyState";
+import ErrorState from "../components/ErrorState";
+import { SkeletonCard } from "../components/Skeleton";
 
 export default function JobsPage() {
   const [jobs, setJobs] = useState([]);
   const [cvSkills, setCvSkills] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [loadCount, setLoadCount] = useState(0);
   const [search, setSearch] = useState("");
 
   useEffect(() => {
+    setLoading(true);
+    setError("");
     Promise.all([
       api.get("/jobs"),
       api.get("/cv/me").catch(() => null),
@@ -19,7 +25,7 @@ export default function JobsPage() {
     }).catch(() => {
       setError("Could not load jobs.");
     }).finally(() => setLoading(false));
-  }, []);
+  }, [loadCount]);
 
   const filtered = jobs.filter((job) => {
     const q = search.toLowerCase();
@@ -43,9 +49,6 @@ export default function JobsPage() {
       })
     : filtered;
 
-  if (loading) return <div className="p-10 text-center text-gray-400">Loading jobs...</div>;
-  if (error) return <div className="p-10 text-center text-red-500">{error}</div>;
-
   return (
     <div className="max-w-4xl mx-auto px-4 py-10">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
@@ -59,20 +62,36 @@ export default function JobsPage() {
         />
       </div>
 
-      {cvSkills.length > 0 && (
-        <p className="text-sm text-indigo-600 mb-4">
-          Showing {sorted.length} jobs - sorted by your skill match
-        </p>
-      )}
-
-      {sorted.length === 0 ? (
-        <p className="text-gray-400 text-center py-10">No jobs found.</p>
-      ) : (
+      {loading ? (
         <div className="space-y-4">
-          {sorted.map((job) => (
-            <JobCard key={job.id} job={job} cvSkills={cvSkills} />
-          ))}
+          <SkeletonCard />
+          <SkeletonCard />
+          <SkeletonCard />
+          <SkeletonCard />
         </div>
+      ) : error ? (
+        <ErrorState message={error} onRetry={() => setLoadCount((n) => n + 1)} />
+      ) : (
+        <>
+          {cvSkills.length > 0 && (
+            <p className="text-sm text-indigo-600 mb-4">
+              Showing {sorted.length} jobs — sorted by your skill match
+            </p>
+          )}
+          {!loading && sorted.length === 0 ? (
+            <EmptyState
+              icon="🔍"
+              title="No jobs match your search"
+              description="Try a broader keyword, or clear the search to see all 30 jobs."
+            />
+          ) : (
+            <div className="space-y-4">
+              {sorted.map((job) => (
+                <JobCard key={job.id} job={job} cvSkills={cvSkills} />
+              ))}
+            </div>
+          )}
+        </>
       )}
     </div>
   );

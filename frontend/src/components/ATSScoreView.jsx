@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import api from "../lib/api";
+import { SkeletonLine, SkeletonBox } from "./Skeleton";
 import {
   RadarChart,
   Radar,
@@ -65,8 +66,23 @@ export default function ATSScoreView({ jobs }) {
         </select>
       </div>
 
-      {loading && (
-        <p className="text-sm text-gray-400">Analysing your CV...</p>
+      {!selectedJobId && (
+        <div className="text-center py-8 text-slate-500 text-sm">
+          Pick a job from the dropdown to see your ATS Score
+        </div>
+      )}
+
+      {loading && selectedJobId && (
+        <div className="space-y-3 mt-2">
+          <SkeletonLine width="1/2" className="h-8" />
+          <SkeletonBox className="h-48 w-full" />
+          <div className="grid grid-cols-2 gap-2">
+            <SkeletonBox className="h-16" />
+            <SkeletonBox className="h-16" />
+            <SkeletonBox className="h-16" />
+            <SkeletonBox className="h-16" />
+          </div>
+        </div>
       )}
 
       {error && (
